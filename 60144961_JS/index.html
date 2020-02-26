@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script src="60144961_C01.js" type="text/javascript"></script>
+	<style type="text/css">
+
+		input[type=text], select, textarea {
+		  width: 100%;
+		  padding: 10px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  resize: vertical;
+		}
+		
+
+		button {
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 12px 20px;
+		  border: none;
+		  border-radius: 4px;
+		  cursor: pointer;
+		  
+		}
+		button:hover {
+		  background-color: #45a049;
+		}
+		label {
+  			padding: 12px 12px 0px 0;
+  			display: inline-block;
+		}
+		body{padding: 0px 50px 00px 50px;background-color: #EAEDED}
+		div{padding: 20px}
+		#case_01{background-color:#EBF5FB }
+		#case_02{background-color:#AED6F1 }
+		#case_03{background-color:#3498DB }
+		.btn_group{
+			text-align: right;
+			padding: 10px 0px 0px 0px;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	<div id="case_01">
+		<h1>Hello JavaScript</h1>
+		<button onclick="programer1()">Hello Programer 1</button>
+		<button onclick="programer2()">Hello Programer 2</button>
+	</div>
+	<div  id="case_02">
+		<label for="h_name_id">Name : </label>
+		<input type="text" name="hello_name" id="h_name_id" >
+		<div class="btn_group">
+			<button onclick="Name()">Hello</button> 
+			<button onclick="Nameresult()">Hello to text box</button> 
+		</div>
+		<label for="h_result_id">NameResult : </label>
+		<input type="text" name="hello_result" id="h_result_id" readonly="readonly">
+	</div>
+	<div id="case_03">
+		<label for="number1">Number 1 : </label>
+		<input type="text" name="number1" id="number1">
+		<label for="number2">Number 2 : </label>
+		<input type="text" name="number2" id="number2">
+		<div class="btn_group">
+			<button onclick="Add()"> + </button> <button onclick="Sub()"> - </button>
+			<button onclick="Mul()"> X </button> <button onclick="Div()"> / </button>
+		</div>
+		Result : <input type="text" name="result" id="result_id" readonly="readonly">
+	</div>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

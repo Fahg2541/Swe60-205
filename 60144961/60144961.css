@@ -1,0 +1,62 @@
+#com1pic{
+    width: 310px;
+    padding-left: 5px;
+    float: left;
+    margin: 60px;
+}
+.wrapper{
+    width: 900px;
+    height: 450px;
+    background-color: #ff8c00;
+    
+}
+.line1c1{
+    float: left;
+    padding-bottom: 4px;
+    padding-top: 4px;  
+}
+.line1c2{
+    float: left;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    
+}
+.text1{
+    font-family: Google Sans,Rpbptp,Arial,sans-serif;
+    font-size: 40px;
+}
+
+.line1c3{
+    margin: -10px;
+    padding: 42px;
+    line-height: 20pt;
+    padding-bottom: 30px;
+    background-color: rgb(165,42,42);
+
+}
+.text1{
+    line-height: 1pt;
+}
+.text2{
+    font-size: 25px;
+}
+.text3{
+    line-height: 1pt;
+}
+.text4{
+    word-spacing: 10px;
+    margin: -20px;
+    float: left;
+    color: white;
+    padding-bottom: 45px;
+    padding-left: 80px;
+}
+.text5{
+    word-spacing: -25px;
+    margin: 25px;
+    font-size: 60px;
+    color: rgb(255, 255,1);
+}
+.text6{
+    color: white;
+}
