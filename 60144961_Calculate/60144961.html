@@ -1,114 +1,145 @@
-<!DOCTYPE html>
-    <html>
-        <head>
-            <style type="text/css">
-                table, th, td {
-                    border: 2px solid #ffffff;
-                    padding: 20px;
-                    background: #000000;
-                    color: #ffffff;
-                    border: none;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 20px;
-                    cursor: default;
-                    }
-                    .black_button{
-                        border:#000;
-                        padding: 30px;
-                        line-height: 10px;
-                        padding-bottom: 30px;
-                        /* border:30px solid #333333; */
-                        background-color:#333333;
-                        /* color:#fff;
-                        font-size:14px;
-                        height:40px; */
-                        }
-                        .gray_button{
-                            border:#000;
-                        padding: 30px;
-                        line-height: 10px;
-                        padding-bottom: 30px;
-                        /* border:30px solid #333333; */
-                        background-color:#666666;
-                        /* color:#fff;
-                        font-size:14px;
-                        height:40px; */
-                        }
-                        .red_button{
-                        border:#000 solid 4px;
-                        background-color:#000;
-                        color:#fff;
-                        font-size:14px;
-                        font-weight:bold;
-                        height:40px;
-                        
-                        }
-                        .bule_button{
-                        border:#000 solid 4px;
-                        background-color:#000;
-                        color:#fff;
-                        font-size:14px;
-                        font-weight:bold;
-                        height:40px;
-                        
-                        }
-                        .purple_button{
-                        border:#000 solid 4px;
-                        background-color:#000;
-                        color:#fff;
-                        font-size:14px;
-                        font-weight:bold;
-                        height:40px;
-                        
-                        }
-                table {
-                    border-spacing: 5px;
-                    }
-            </style>
-        </head>
-        <body>
-            <img src="UI.png" alt="">
-            <table style="width:60%">
-        <tr>
-            <td colspan="4"><input type="text" id="result" name="result"></td>   
-        </tr>
-        <tr>
-            <td><input type="submit" value="C" class="black_button"></td>
-            <td><input type="submit" value="M" class="black_button"></td>
-            <td><input type="button" id="Dec" name="Dec"></td>
-            <td><input type="button" id="⌫" name="⌫"></td>
-        </tr>
-        <tr>
-            <td>&#8730;</td>
-            <td>Mod</td>
-            <td>ₓ</td>
-            <td>÷</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>*</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>+</td>
-        </tr>
-        <tr>
-            <td>0</td>
-            <td></td>
-            <td>.</td>
-            <td>=</td>
-        </tr>
-        </table>
+<html>
+    <head>
+        <title>
+            Calculate
+        </title>
+        <script type="text/javascript">
+            function InsertCalaulate(Number){
+                document.form.textview.value = document.form.textview.value+Number;
+            }
 
-</body>
+            function EqualCalculate(){
+                var exp = document.form.textview.value;
+                if(exp){
+                    document.form.textview.value = eval(exp);
+                }
+            }
+
+            function DeleteCalculate(){
+                var exp = document.form.textview.value;
+                document.form.textview.value = exp.substring(0,exp.length-1);
+            }
+
+            function CleanCalculate(){
+                document.form.textview.value = "";
+            }
+        </script>
+        <style>
+            .main{
+                background-color: black;
+                height: 100%;
+            }
+
+            .button{
+                width: 70px;
+                height: 70px;
+                font-size: 1.3em;
+                margin: 0;
+                cursor: pointer;
+                padding: 0;
+                box-shadow: 2px;
+                background-color: #3f3f3f;
+                color: #ffffff;
+                border: none;
+            }
+
+            /* .blackbutton{
+                width: 50px;
+                height: 50px;
+                font-size: 1.3em;
+                margin: 0;
+                cursor: pointer;
+                padding: 0;
+                box-shadow: 2px;
+                background-color: black;
+                color: red;
+            }
+
+            .bluebutton{
+                width: 50px;
+                height: 50px;
+                font-size: 1.3em;
+                margin: 0;
+                cursor: pointer;
+                padding: 0;
+                box-shadow: 2px;
+                background-color: black;
+                color: red;
+            }
+
+            .graybutton{
+                width: 50px;
+                height: 50px;
+                font-size: 1.3em;
+                margin: 0;
+                cursor: pointer;
+                padding: 0;
+                box-shadow: 2px;
+                background-color: black;
+                color: red; */
+            
+            .textview{
+                width: 290px;
+                height: 100px;
+                font-size: 25px;
+                /* padding: 0; */
+                /* margin-left: 3px; */
+                background-color: #2e2e2e;
+                text-align: right;
+                border: none;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div class="main">
+            <form name="form">
+                <input class="textview" name="textview">
+            </form>
+            <table>
+                <tr>
+                    <td><input class="button" style="background-color: red;" type="button" value="C" onclick="CleanCalculate()"></td>
+                    <td><input class="button" type="button" value="M" ></td>
+                    <td><input class="button" style="background-color: #0c9cb4;"type="button" value="Dec"></td>
+                    <td><input class="button" style="background-color: red;" type="button" value="⌫" onclick="DeleteCalculate()"></td>
+                </tr>
+
+                <tr>
+                    <td><input class="button" type="button" value="√"></td>
+                    <td><input class="button" type="button" value="Mod"></td>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="X"></td>
+                    <td><input class="button" type="button" value="÷" onclick="InsertCalaulate('/')"></td>
+                </tr>
+
+                <tr>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="7" onclick="InsertCalaulate(7)"></td>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="8" onclick="InsertCalaulate(8)"></td>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="9" onclick="InsertCalaulate(9)"></td>
+                    <td><input class="button" type="button" value="*" onclick="InsertCalaulate('*')"></td>
+                </tr>
+
+                <tr>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="4" onclick="InsertCalaulate(4)"></td>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="5" onclick="InsertCalaulate(5)"></td>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="6" onclick="InsertCalaulate(6)"></td>
+                    <td><input class="button" type="button" value="-" onclick="InsertCalaulate('-')"></td>
+                </tr>
+
+                <tr>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="1" onclick="InsertCalaulate(1)"></td>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="2" onclick="InsertCalaulate(2)"></td>
+                    <td><input class="button" style="background-color: #2d2d2d;" type="button" value="3" onclick="InsertCalaulate(3)"></td>
+                    <td><input class="button" type="button" value="+" onclick="InsertCalaulate('+')"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input class="button" style="width: 144px; background-color: #2d2d2d;" type="button" value="0" onclick="InsertCalaulate('0')"></td>
+                    <td><input class="button" type="button" value="." onclick="InsertCalaulate('.')"></td>
+                    <td><input class="button" type="button" value="=" onclick="EqualCalculate()"></td>
+
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>
